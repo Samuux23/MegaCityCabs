@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('Cover.jpg'); /* Add your background image here */
+            background-image: url('Cover.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,7 +25,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            background: rgba(0, 0, 0, 0.5); 
             z-index: 1;
         }
         .login-container {

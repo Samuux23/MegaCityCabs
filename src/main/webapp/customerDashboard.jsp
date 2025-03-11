@@ -1,166 +1,301 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Customer Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Background Image for entire page */
+        /* Modern Yellow-Orange Palette from Admin Dashboard */
         body {
-            font-family: 'Arial', sans-serif;
-            background: url("images/your-customer-bg.jpg") no-repeat center center fixed;
-            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2); /* light yellow to light orange gradient */
+            color: #444;
             margin: 0;
             padding: 0;
         }
-        /* Header bar styling */
-        .header-bar {
-            background-color: rgba(0, 0, 0, 0.7);
+        .dashboard-header {
+            background: linear-gradient(135deg, #FFEB3B, #FF9800);
             color: #fff;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
-            border-radius: 0 0 10px 10px;
-            margin-bottom: 30px;
-            position: relative; /* For placing the sign-out button */
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .header-bar h2 {
+        .dashboard-header h2 {
             margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
         }
         .sign-out-btn {
             position: absolute;
             top: 20px;
             right: 20px;
+            background-color: rgba(255,255,255,0.9);
+            color: #FF9800;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
         }
-        /* Container styling */
-        .content-container {
-            max-width: 900px;
-            margin: 2rem auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 2rem;
+        .sign-out-btn:hover {
+            background-color: #fff;
         }
-        /* Table and form styling */
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            margin: -20px auto 30px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            max-width: 1200px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #FF9800;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255,152,0,0.5);
+        }
+        .btn-primary {
+            background-color: #FF9800;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #FB8C00;
+        }
+        .btn-info {
+            background-color: #FFC107;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-info:hover {
+            background-color: #FFB300;
+        }
+
+       /* Custom "Cancel" button style (Red) */
+         .btn-cancel {
+            background-color: #9c0c0c;
+            border: none;
+            color: #fff;
+            width: 38px;     /* Set equal width and height */
+            height: 38px;
+            padding: 0;       /* Remove default padding */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            display: inline-flex; /* Use flexbox for centering */
+            align-items: center;
+            justify-content: center;
+            line-height: 1;    /* Reset line-height */
+            text-align: center;
+        }
+
+        .btn-cancel:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Custom "Print Bill" button style  (Green) */
+        .btn-print {
+            background-color: #f5c425;
+            border: none;
+            color: #fff;
+            width: 38px;      /* Set equal width and height */
+            height: 38px;
+            padding: 0;        /* Remove default padding */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            display: inline-flex; /* Use flexbox for centering */
+            align-items: center;
+            justify-content: center;
+            line-height: 1;    /* Reset line-height */
+            text-align: center;
+        }
+
+        .btn-print:hover {
+            background-color: #d69f06;
+        }
+
+        /* Styles for action buttons - now not using bootstrap "sm" classes */
+        .btn-actions {
+            border: none;
+            color: #fff;
+            padding: 0;   /* Removed padding, now buttons are square */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+             width: 38px;      /* Set equal width and height */
+            height: 38px;
+              display: inline-flex; /* Use flexbox for centering */
+            align-items: center;
+            justify-content: center;
+             text-align: center;
+        }
+
+        .btn-danger {
+            background-color: #e57373;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-danger:hover {
+            background-color: #d32f2f;
+        }
+        .btn-success {
+            background-color: #81c784;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-success:hover {
+            background-color: #66bb6a;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Subtle shadow */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; /* Hide overflow for rounded corners */
+        }
+
         .table th,
         .table td {
             text-align: center;
             vertical-align: middle;
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee; /* Lighter border */
         }
-        .form-control {
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            padding: 0.75rem;
+
+        .table th {
+            background-color: #f5f5f5;
+            font-weight: 500; /* Slightly lighter font-weight */
+            color: #555;
         }
-        .form-control:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+        .table tbody tr:hover {
+            background-color: #f9f9f9;
         }
-        .btn {
-            margin-top: 10px;
-            padding: 0.75rem;
-            border-radius: 5px;
-            font-size: 1rem;
+        .table tbody tr:last-child td {
+            border-bottom: none;
         }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .btn-info {
-            background-color: #17a2b8;
-            border: none;
-        }
-        .btn-info:hover {
-            background-color: #138496;
-        }
-        .btn-danger {
-            background-color: #dc3545;
-            border: none;
-        }
-        .btn-danger:hover {
-            background-color: #c82333;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border: none;
-        }
-        .btn-success:hover {
-            background-color: #218838;
-        }
-        /* Card styling */
-        .card {
-            margin-bottom: 1.5rem;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .card-header {
-            background-color: #007bff;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px 10px 0 0;
-        }
+
     </style>
 </head>
 <body>
 
     <!-- Header with sign-out button -->
-    <div class="header-bar">
-        <h2>Welcome to Customer Dashboard</h2>
-        <a href="login.jsp" class="btn btn-danger sign-out-btn">Sign Out</a>
+    <div class="dashboard-header">
+        <h2><i class="fas fa-user"></i> Customer Dashboard</h2>
+        <!-- Sign Out button linking to login.jsp -->
+        <a href="login.jsp" class="btn sign-out-btn">Sign Out</a>
     </div>
 
-    <div class="content-container">
+    <div class="container">
+
         <!-- Create a New Booking Section -->
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title mb-0">Create a New Booking</h3>
-            </div>
             <div class="card-body">
+                <h3 class="card-title"><i class="fas fa-plus-circle"></i> Create a New Booking</h3>
                 <form id="bookingForm">
-                    <label for="bookingDate" class="form-label">Date:</label>
-<input type="date" class="form-control" 
-       id="bookingDate" 
-       name="bookingDate" required />
-
-                    <div class="mb-3">
-                        <label for="vehicleType" class="form-label">Vehicle Type:</label>
-                        <select class="form-select" id="vehicleType" name="vehicleType" required>
+                    <div class="form-group">
+                        <label for="bookingDate">Date:</label>
+                        <input type="date" class="form-control" id="bookingDate" name="bookingDate" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type:</label>
+                        <select class="form-control" id="vehicleType" name="vehicleType" required />
                             <option value="">Select Type</option>
                             <option value="Sedan">Sedan</option>
                             <option value="SUV">SUV</option>
                             <option value="Van">Van</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="destination" class="form-label">Destination:</label>
+                    <div class="form-group">
+                        <label for="destination">Destination:</label>
                         <input type="text" class="form-control" id="destination" name="destination" required />
                     </div>
-                    <div class="mb-3">
-                        <label for="distance" class="form-label">Distance (KM):</label>
+                    <div class="form-group">
+                        <label for="distance">Distance (KM):</label>
                         <input type="number" step="0.1" class="form-control" id="distance" name="distance" required />
                     </div>
-                    <!-- Optional discount field if needed -->
-                    <button type="submit" class="btn btn-primary">Book Ride</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Book Ride</button>
                 </form>
             </div>
         </div>
 
         <!-- Guidelines Section -->
         <div class="text-center mt-4">
-            <a href="CustomerGuidelineServlet" class="btn btn-info">View Guidelines</a>
+            <a href="CustomerGuidelineServlet" class="btn btn-info"><i class="fas fa-info-circle"></i> View Guidelines</a>
         </div>
 
         <hr class="my-4">
 
         <!-- Your Reservations Section -->
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title mb-0">Your Reservations</h3>
-            </div>
             <div class="card-body">
+                <h3 class="card-title"><i class="fas fa-list-alt"></i> Your Reservations</h3>
                 <table class="table table-striped" id="reservationsTable">
                     <thead>
                         <tr>
@@ -182,7 +317,8 @@
                 </table>
             </div>
         </div>
-    </div> <!-- end content-container -->
+
+    </div> <!-- end container -->
 
     <script>
         // Handle new booking form submission
@@ -222,8 +358,8 @@
 
                     data.forEach(booking => {
                         // Format the booking date/time for display
-                        let bookingDateStr = booking.bookingDate 
-                            ? new Date(booking.bookingDate).toLocaleString() 
+                        let bookingDateStr = booking.bookingDate
+                            ? new Date(booking.bookingDate).toLocaleString()
                             : "N/A";
 
                         // Highlight status if Approved
@@ -244,11 +380,10 @@
                                 <td>${booking.price} LKR</td>
                                 <td>${statusHtml}</td>
                                 <td>
-                                    <button class="btn btn-danger btn-sm" 
-                                            onclick="cancelBooking(${booking.orderNumber})">
-                                        Cancel
+                                     <button class="btn btn-cancel btn-actions" onclick="cancelBooking(${booking.orderNumber})">
+                                        <i class="fas fa-times"></i>
                                     </button>
-                                    <button class="btn btn-success btn-sm"
+                                    <button class="btn btn-print btn-actions"
                                             onclick="printBill(
                                                 ${booking.orderNumber},
                                                 '${bookingDateStr}',
@@ -258,7 +393,7 @@
                                                 '${booking.vehicle ? booking.vehicle.vehicleNumber : 'N/A'}',
                                                 '${booking.price}'
                                             )">
-                                        Print Bill
+                                        <i class="fas fa-print"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -299,15 +434,15 @@
                     <title>Booking Invoice</title>
                     <style>
                         body {
-                            font-family: Arial, sans-serif; 
-                            padding: 20px; 
+                            font-family: Arial, sans-serif;
+                            padding: 20px;
                             text-align: center;
                         }
                         .bill-container {
-                            width: 400px; 
-                            margin: auto; 
-                            border: 1px solid #ddd; 
-                            padding: 20px; 
+                            width: 400px;
+                            margin: auto;
+                            border: 1px solid #ddd;
+                            padding: 20px;
                             text-align: left;
                         }
                         h2 { text-align: center; }
