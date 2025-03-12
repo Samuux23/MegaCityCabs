@@ -15,12 +15,16 @@
         .list-group-item {
             border: none; /* Remove list group borders */
         }
+        .gradient-header {
+            background: linear-gradient(135deg, #FF9800, #FFEB3B); /* Darker on the left, lighter on the right */
+            color: white; /* Ensure text is readable */
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header gradient-header">
                 <h2 class="mb-0">Customer Dashboard Guidelines</h2>
             </div>
             <div class="card-body">
@@ -57,15 +61,15 @@
                     <li class="list-group-item">
                         <strong>Email:</strong> <a href="mailto:support@megacitycab.com">support@megacitycab.com</a>
                     </li>
-                    <li class="list-group-item">
-                        <strong>Live Chat:</strong> Visit our website and click the chat icon in the corner.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Social Media:</strong> Find us on Facebook, Twitter, and Instagram @MegaCityCab.
-                    </li>
-                    <li class="list-group-item">
-                       For a detailed breakdown of pricing factors (base fare, distance rates, surge pricing, etc.), please consult our pricing guide on the website. You can find there a list of rates, that can be change based on the surge price.
-                    </li>
+<!--                     <li class="list-group-item"> -->
+<!--                         <strong>Live Chat:</strong> Visit our website and click the chat icon in the corner. -->
+<!--                     </li> -->
+<!--                     <li class="list-group-item"> -->
+<!--                         <strong>Social Media:</strong> Find us on Facebook, Twitter, and Instagram @MegaCityCab. -->
+<!--                     </li> -->
+<!--                     <li class="list-group-item"> -->
+<!--                        For a detailed breakdown of pricing factors (base fare, distance rates, surge pricing, etc.), please consult our pricing guide on the website. You can find there a list of rates, that can be change based on the surge price. -->
+<!--                     </li> -->
                 </ul>
 
                 <a href="customerDashboard.jsp" class="btn btn-secondary mt-3">Back to Dashboard</a>
