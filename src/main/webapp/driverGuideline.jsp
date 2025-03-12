@@ -15,12 +15,16 @@
         .list-group-item {
             border: none; /* Remove list group borders */
         }
+        .gradient-header {
+            background: linear-gradient(135deg, #FF9800, #FFEB3B); /* Darker on the left, lighter on the right */
+            color: white; /* Ensure text is readable */
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header gradient-header">
                 <h2 class="mb-0">Driver Dashboard Guidelines</h2>
             </div>
             <div class="card-body">
@@ -54,12 +58,12 @@
                     <li class="list-group-item">
                         <strong>Email:</strong> <a href="mailto:driversupport@megacitycab.com">driversupport@megacitycab.com</a>
                     </li>
-                    <li class="list-group-item">
-                        <strong>Emergency Hotline:</strong> +1-555-911 (for immediate safety concerns)
-                    </li>
-                    <li class="list-group-item">
-                        For assistance with navigating the dashboard, understanding booking statuses, or any technical issues, please contact our support team.
-                    </li>
+<!--                     <li class="list-group-item"> -->
+<!--                         <strong>Emergency Hotline:</strong> +1-555-911 (for immediate safety concerns) -->
+<!--                     </li> -->
+<!--                     <li class="list-group-item"> -->
+<!--                         For assistance with navigating the dashboard, understanding booking statuses, or any technical issues, please contact our support team. -->
+<!--                     </li> -->
                 </ul>
 
                 <a href="DriverVehiclesServlet" class="btn btn-secondary mt-3">Back to Dashboard</a>
