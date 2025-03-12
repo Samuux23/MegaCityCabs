@@ -4,29 +4,37 @@
 <head>
     <title>Driver Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Background Image for the entire page
-           Replace "images/your-driver-bg.jpg" with your actual image path or URL */
+
+        /* Background Image for the entire page */
         body {
-            font-family: 'Arial', sans-serif;
-            background: url("images/your-driver-bg.jpg") no-repeat center center fixed;
-            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2); /* light yellow to light orange gradient */
+            color: #444;
             margin: 0;
             padding: 0;
         }
 
         /* Header bar styling */
         .header-bar {
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+            background: linear-gradient(135deg, #FFEB3B, #FF9800);
             color: #fff;
             padding: 20px;
             text-align: center;
-            border-radius: 0 0 10px 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
             margin-bottom: 30px;
             position: relative; /* So we can place the sign-out button absolutely */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .header-bar h2 {
             margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
         }
 
         /* Sign Out button in the top-right corner */
@@ -34,27 +42,82 @@
             position: absolute;
             top: 20px;
             right: 20px;
+            background-color: rgba(255,255,255,0.9);
+            color: #FF9800;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .sign-out-btn:hover {
+            background-color: #fff;
         }
 
         /* Semi‑transparent container for main content */
         .content-container {
-            max-width: 900px;
-            margin: 2rem auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 2rem;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            margin: -20px auto 30px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            max-width: 1200px;
         }
 
         .form-control {
             margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
         }
+
+        .form-control:focus {
+            border-color: #FF9800;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255,152,0,0.5);
+        }
+
         .btn {
             margin-top: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
+
+        .btn-primary {
+            background-color: #FF9800;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #FB8C00;
+        }
+
+        .btn-info {
+            background-color: #FFC107;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-info:hover {
+            background-color: #FFB300;
+        }
+
+
         /* Additional styling (optional) */
         .table th, .table td {
             text-align: center;
             vertical-align: middle;
+        }
+
+        .table thead th {
+            background-color: #FFECB3;
+            border-bottom: 2px solid #FF9800;
         }
     </style>
 </head>
@@ -62,14 +125,14 @@
 
     <!-- Header with sign-out button -->
     <div class="header-bar">
-        <h2>Welcome to Driver Dashboard</h2>
+        <h2><i class="fas fa-taxi"></i> Welcome to Driver Dashboard</h2>
         <!-- Sign Out button linking to login.jsp -->
-        <a href="login.jsp" class="btn btn-danger sign-out-btn">Sign Out</a>
+        <a href="login.jsp" class="btn sign-out-btn">Sign Out</a>
     </div>
 
     <div class="content-container">
         <!-- Form to Add New Vehicle (no image field) -->
-        <h3>Add New Vehicle</h3>
+        <h3><i class="fas fa-car"></i> Add New Vehicle</h3>
         <form id="vehicleForm" action="VehicleServlet" method="post">
             <div class="mb-3">
                 <label for="vehicleNumber" class="form-label">Vehicle Number:</label>
@@ -77,22 +140,22 @@
             </div>
             <div class="mb-3">
                 <label for="vehicleType" class="form-label">Vehicle Type:</label>
-                <select class="form-select" id="vehicleType" name="vehicleType" required>
+                <select class="form-select form-control" id="vehicleType" name="vehicleType" required>
                     <option value="">Select Type</option>
                     <option value="Sedan">Sedan</option>
                     <option value="SUV">SUV</option>
                     <option value="Van">Van</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Add Vehicle</button>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add Vehicle</button>
         </form>
 
         <hr class="my-4">
 
-        <a href="DriverGuidelineServlet" class="btn btn-info">View Guidelines</a>
+        <a href="DriverGuidelineServlet" class="btn btn-info"><i class="fas fa-book"></i> View Guidelines</a>
         <hr class="my-4">
 
-        <h3>Your Vehicles</h3>
+        <h3><i class="fas fa-cars"></i> Your Vehicles</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -108,7 +171,7 @@
 
         <hr class="my-4">
 
-        <h3>Booking Details</h3>
+        <h3><i class="fas fa-clipboard-list"></i> Booking Details</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -276,4 +339,3 @@
     </script>
 </body>
 </html>
-
