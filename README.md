@@ -69,11 +69,20 @@ To better understand the user interface of the MegaCityCabs application, here ar
 ### Home Page
 ![Home UI](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010141.png?raw=true)
 
-### Dashboard
-![Dashboard UI](https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/dashboard-ui.png)
+### Login Page
+![Dashboard UI]([https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/dashboard-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010155.png?raw=true))
 
-### Booking Page
-![Booking UI](https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png)
+### Sign up Page
+![Booking UI]([https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010216.png?raw=true))
+
+### Admin Dashboard 
+![Booking UI]([[https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010216.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/blob/main/screencapture-localhost-8686-megacity-adminDashboard-jsp-2025-03-12-01_13_08.png?raw=true))
+
+### Customer Dashboard 
+![Booking UI]([[[https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010216.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/blob/main/screencapture-localhost-8686-megacity-adminDashboard-jsp-2025-03-12-01_13_08.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/blob/main/screencapture-localhost-8686-megacity-customerDashboard-jsp-2025-03-13-10_46_23.png?raw=true))
+
+### Driver Dashboard 
+![Booking UI]([[[https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010216.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/blob/main/screencapture-localhost-8686-megacity-adminDashboard-jsp-2025-03-12-01_13_08.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/blob/main/screencapture-localhost-8686-megacity-DriverVehiclesServlet-2025-03-13-10_52_47.png?raw=true))
 
 ## 🤝 Contributing
 Contributions are welcome! If you would like to improve this project:
