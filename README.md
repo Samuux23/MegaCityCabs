@@ -70,7 +70,7 @@ To better understand the user interface of the MegaCityCabs application, here ar
 ![Home UI](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010141.png?raw=true)
 
 ### Login Page
-![Dashboard UI]([https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/dashboard-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010155.png?raw=true))
+![Dashboard UI]([[https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/dashboard-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010155.png?raw=true)](https://github.com/Samuux23/MegaCityCabs/commit/d0186bfaef4294c224058ab3972ce8519a71428f#diff-b0e182e3b4ec6e99dbb46ffe2319fd24d002463659e4cf8f3d8729429f58f8c7))
 
 ### Sign up Page
 ![Booking UI]([https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/booking-ui.png](https://github.com/Samuux23/MegaCityCabs/blob/main/Screenshot%202025-03-12%20010216.png?raw=true))
