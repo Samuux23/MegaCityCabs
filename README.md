@@ -66,8 +66,8 @@ mvn tomcat7:run
 ## 📸 Screenshots
 To better understand the user interface of the MegaCityCabs application, here are some screenshots:
 
-### Login Page
-![Login UI](https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/login-ui.png)
+### Home Page
+![Home UI](Screenshot 2025-03-12 010141.png)
 
 ### Dashboard
 ![Dashboard UI](https://raw.githubusercontent.com/Samuux23/MegaCityCabs/main/dashboard-ui.png)
