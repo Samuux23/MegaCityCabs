@@ -12,7 +12,7 @@ import model.DriverCredential;
 
 public class VehicleDAO {
 
-    private static final Logger logger = Logger.getLogger(VehicleDAO.class.getName()); // Add this line
+    private static final Logger logger = Logger.getLogger(VehicleDAO.class.getName()); 
 
     public void create(Vehicle vehicle) throws SQLException {
         String sql = "INSERT INTO vehicles (driver_id, vehicleNumber, vehicleType, status) VALUES (?, ?, ?, ?)";
@@ -96,18 +96,18 @@ public class VehicleDAO {
          PreparedStatement ps = con.prepareStatement(sql)) {
 
         ps.setString(1, vehicleType);
-        logger.info("Executing query: " + sql + " with vehicleType: " + vehicleType);  // Added Logging
+        logger.info("Executing query: " + sql + " with vehicleType: " + vehicleType);  
         try (ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
                 Vehicle vehicle = mapRowToVehicle(rs);
                 list.add(vehicle);
-                logger.info("Found available vehicle: " + vehicle.getVehicleNumber());   // Added Logging
+                logger.info("Found available vehicle: " + vehicle.getVehicleNumber());   
             }
         }
-        logger.info("Number of available vehicles found: " + list.size());   // Added Logging
+        logger.info("Number of available vehicles found: " + list.size());   
     } catch (SQLException e) {
-        logger.severe("SQL Exception in findAvailableVehicles: " + e.getMessage());   // Added Logging
-        throw e; // Re-throw the exception so the calling code knows about the error
+        logger.severe("SQL Exception in findAvailableVehicles: " + e.getMessage());   
+        throw e; 
     }
     logger.info("Exiting findAvailableVehicles, found " + list.size() + " vehicles.");
     return list;

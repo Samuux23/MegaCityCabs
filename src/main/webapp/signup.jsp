@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('Cover.jpg'); /* Add your background image here */
+            background-image: url('Cover.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,11 +25,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            background: rgba(0, 0, 0, 0.5); 
             z-index: 1;
         }
         .signup-container {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background: rgba(255, 255, 255, 0.9); 
             padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);

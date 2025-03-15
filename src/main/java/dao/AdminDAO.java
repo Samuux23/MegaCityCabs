@@ -23,10 +23,10 @@ public class AdminDAO {
             try (ResultSet rs = stmt.executeQuery()){
                 if (rs.next()) {
                     admin = new AdminCredential();
-                    admin.setId(rs.getLong("id"));  // Make sure AdminCredential has a setId method!
+                    admin.setId(rs.getLong("id"));  
                     admin.setUsername(rs.getString("username"));
                     admin.setPassword(rs.getString("password"));
-                    // Set other fields if any...
+                    
                 }
             }
         }

@@ -13,7 +13,7 @@
         /* Background Image for the entire page */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #FFF9C4, #FFE0B2); /* light yellow to light orange gradient */
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2); 
             color: #444;
             margin: 0;
             padding: 0;
@@ -28,7 +28,7 @@
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             margin-bottom: 30px;
-            position: relative; /* So we can place the sign-out button absolutely */
+            position: relative; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .header-bar h2 {
@@ -55,7 +55,7 @@
             background-color: #fff;
         }
 
-        /* Semi‑transparent container for main content */
+        
         .content-container {
             background-color: #fff;
             border-radius: 15px;
