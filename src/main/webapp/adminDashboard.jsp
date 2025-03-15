@@ -14,10 +14,10 @@
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Modern Yellow-Orange Palette */
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #FFF9C4, #FFE0B2); /* light yellow to light orange gradient */
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2); 
             color: #444;
             margin: 0;
             padding: 0;

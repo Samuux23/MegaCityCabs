@@ -29,22 +29,22 @@
         .header-buttons a {
             display: inline-block;
             text-decoration: none;
-            color: #222; /* Even darker text */
-            background: linear-gradient(to bottom, #ffdd57, #ffbb33); /* Lighter, brighter gradient */
+            color: #222; 
+            background: linear-gradient(to bottom, #ffdd57, #ffbb33); 
             padding: 12px 24px;
             margin-left: 10px;
             border-radius: 8px;
             font-weight: bold;
-            border: none; /* Remove the border for a cleaner look */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.2s ease-in-out; /* Smooth transitions */
+            border: none; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.2s ease-in-out; 
             cursor: pointer;
         }
 
         .header-buttons a:hover {
-            transform: translateY(-2px);  /* Slight upward movement */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
-            background: linear-gradient(to bottom, #ffcc00, #ff9900); /* Even brighter hover gradient */
+            transform: translateY(-2px);  
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); 
+            background: linear-gradient(to bottom, #ffcc00, #ff9900); 
         }
 
         /* Alternative: Inverted style */
@@ -65,8 +65,8 @@
         }
 
         .header-buttons a:hover {
-            background-color: #ffbb33; /* Fill the button */
-            color: #222; /* Darken the text */
+            background-color: #ffbb33; 
+            color: #222; 
         }
         */
     </style>

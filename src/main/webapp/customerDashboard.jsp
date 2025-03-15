@@ -14,10 +14,10 @@
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Modern Yellow-Orange Palette from Admin Dashboard */
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #FFF9C4, #FFE0B2); /* light yellow to light orange gradient */
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2); 
             color: #444;
             margin: 0;
             padding: 0;
@@ -125,23 +125,23 @@
             background-color: #FFB300;
         }
 
-       /* Custom "Cancel" button style (Red) */
+       /* Custom "Cancel"*/
          .btn-cancel {
             background-color: #9c0c0c;
             border: none;
             color: #fff;
-            width: 38px;     /* Set equal width and height */
+            width: 38px;     
             height: 38px;
-            padding: 0;       /* Remove default padding */
+            padding: 0;       
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-size: 0.9em;
             box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-            display: inline-flex; /* Use flexbox for centering */
+            display: inline-flex; 
             align-items: center;
             justify-content: center;
-            line-height: 1;    /* Reset line-height */
+            line-height: 1;    
             text-align: center;
         }
 
@@ -149,23 +149,23 @@
             background-color: #d32f2f;
         }
 
-        /* Custom "Print Bill" button style  (Green) */
+        /* Custom "Print Bill" button*/
         .btn-print {
             background-color: #f5c425;
             border: none;
             color: #fff;
-            width: 38px;      /* Set equal width and height */
+            width: 38px;      
             height: 38px;
-            padding: 0;        /* Remove default padding */
+            padding: 0;        
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-size: 0.9em;
             box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-            display: inline-flex; /* Use flexbox for centering */
+            display: inline-flex; 
             align-items: center;
             justify-content: center;
-            line-height: 1;    /* Reset line-height */
+            line-height: 1;    
             text-align: center;
         }
 
@@ -173,17 +173,17 @@
             background-color: #d69f06;
         }
 
-        /* Styles for action buttons - now not using bootstrap "sm" classes */
+        /* Styles for action buttons  */
         .btn-actions {
             border: none;
             color: #fff;
-            padding: 0;   /* Removed padding, now buttons are square */
+            padding: 0;   
             border-radius: 5px;
             transition: background-color 0.3s ease;
             font-size: 0.9rem;
-             width: 38px;      /* Set equal width and height */
+             width: 38px;      
             height: 38px;
-              display: inline-flex; /* Use flexbox for centering */
+              display: inline-flex; 
             align-items: center;
             justify-content: center;
              text-align: center;
@@ -215,9 +215,9 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Subtle shadow */
-            border-radius: 8px; /* Rounded corners */
-            overflow: hidden; /* Hide overflow for rounded corners */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
+            border-radius: 8px; 
+            overflow: hidden; 
         }
 
         .table th,
@@ -225,12 +225,12 @@
             text-align: center;
             vertical-align: middle;
             padding: 12px 10px;
-            border-bottom: 1px solid #eee; /* Lighter border */
+            border-bottom: 1px solid #eee; 
         }
 
         .table th {
             background-color: #f5f5f5;
-            font-weight: 500; /* Slightly lighter font-weight */
+            font-weight: 500; 
             color: #555;
         }
 
@@ -318,7 +318,7 @@
             </div>
         </div>
 
-    </div> <!-- end container -->
+    </div> 
 
     <script>
         // Handle new booking form submission

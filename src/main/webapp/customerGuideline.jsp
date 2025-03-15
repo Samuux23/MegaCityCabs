@@ -6,18 +6,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: #f8f9fa; 
         }
         .card {
-            border: none; /* Remove card borders */
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            border: none; 
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05); 
         }
         .list-group-item {
-            border: none; /* Remove list group borders */
+            border: none; 
         }
         .gradient-header {
-            background: linear-gradient(135deg, #FF9800, #FFEB3B); /* Darker on the left, lighter on the right */
-            color: white; /* Ensure text is readable */
+            background: linear-gradient(135deg, #FF9800, #FFEB3B); 
+            color: white; 
         }
     </style>
 </head>

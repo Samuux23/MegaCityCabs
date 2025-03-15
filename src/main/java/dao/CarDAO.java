@@ -22,7 +22,7 @@ public class CarDAO {
             }
             try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    car.setId(generatedKeys.getLong(1)); // Make sure your Car class has setId(long)
+                    car.setId(generatedKeys.getLong(1)); 
                 } else {
                     throw new SQLException("Creating car failed, no ID obtained.");
                 }

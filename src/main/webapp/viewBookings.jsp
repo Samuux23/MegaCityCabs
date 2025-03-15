@@ -22,16 +22,16 @@
             background-color: #fff;
             border-radius: 15px;
             padding: 40px;
-            margin: 30px auto; /* Added margin for better spacing */
+            margin: 30px auto; 
             box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            max-width: 1400px; /* Increased max-width for larger screens */
+            max-width: 1400px; 
         }
 
         h2 {
             color: #333;
             font-weight: 700;
             margin-bottom: 30px;
-            text-align: center; /* Center the title */
+            text-align: center; 
         }
 
         .table {
@@ -42,22 +42,22 @@
             background-color: #FFECB3;
             color: #333;
             border-bottom: 2px solid #FF9800;
-            text-align: center; /* Center the table header text */
+            text-align: center; 
         }
 
         .table td {
             vertical-align: middle;
-            text-align: center; /* Center the table data text */
+            text-align: center; 
         }
 
         .btn-primary, .btn-danger, .btn-secondary {
             background-color: #FF9800;
             border: none;
             color: #fff;
-            padding: 8px 16px; /* Adjusted padding for smaller buttons */
+            padding: 8px 16px; 
             border-radius: 8px;
             transition: background-color 0.3s ease;
-            font-size: 0.9rem; /* Adjusted font size for buttons */
+            font-size: 0.9rem; 
         }
 
         .btn-primary:hover, .btn-danger:hover, .btn-secondary:hover {
@@ -65,19 +65,19 @@
         }
 
         .btn-danger {
-            background-color: #f44336; /* Red color for delete */
+            background-color: #f44336; 
         }
 
         .btn-danger:hover {
-            background-color: #d32f2f; /* Darker red color for delete hover */
+            background-color: #d32f2f; 
         }
 
         .btn-secondary {
-            background-color: #6c757d; /* Gray color for back button */
+            background-color: #6c757d; 
         }
 
         .btn-secondary:hover {
-            background-color: #5a6268; /* Darker gray color for back button hover */
+            background-color: #5a6268; 
         }
 
         input[type="number"] {
@@ -85,7 +85,7 @@
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            text-align: center; /* Center the text inside the input box */
+            text-align: center; 
         }
     </style>
 </head>

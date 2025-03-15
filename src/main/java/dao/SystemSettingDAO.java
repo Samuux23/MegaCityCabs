@@ -43,7 +43,7 @@ public class SystemSettingDAO {
                 if (rs.next()) {
                     setting = new SystemSetting();
                     setting.setId(rs.getInt("id"));
-                    // Use the underscored column names
+                    
                     setting.setRatePerKm(rs.getDouble("rate_per_km"));
                     setting.setUpdatedAt(rs.getTimestamp("updated_at"));
                 }

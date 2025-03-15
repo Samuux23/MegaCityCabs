@@ -13,7 +13,7 @@ public class TestDBConnection {
     public static void main(String[] args) {
         try (Connection conn = DBUtil.getConnection()) {
             logger.info("Database connection successful!");
-            // Perform a simple query (optional)
+            
             try (PreparedStatement stmt = conn.prepareStatement("SELECT 1")) {
                 stmt.executeQuery();
                 logger.info("Simple query executed successfully.");
